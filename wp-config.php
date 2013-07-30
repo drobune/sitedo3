@@ -47,14 +47,14 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         'put your unique phrase here');
-define('SECURE_AUTH_KEY',  'put your unique phrase here');
-define('LOGGED_IN_KEY',    'put your unique phrase here');
-define('NONCE_KEY',        'put your unique phrase here');
-define('AUTH_SALT',        'put your unique phrase here');
-define('SECURE_AUTH_SALT', 'put your unique phrase here');
-define('LOGGED_IN_SALT',   'put your unique phrase here');
-define('NONCE_SALT',       'put your unique phrase here');
+define('AUTH_KEY',         getenv(wp_auth_key));
+define('SECURE_AUTH_KEY',  getenv(wp_secure_auth_key));
+define('LOGGED_IN_KEY',    getenv(wp_logged_in_key));
+define('NONCE_KEY',        getenv(wp_nonce_key));
+define('AUTH_SALT',        getenv(wp_auth_salt));
+define('SECURE_AUTH_SALT', getenv(wp_secure_auth_salt));
+define('LOGGED_IN_SALT',   getenv(wp_logged_in_salt));
+define('NONCE_SALT',       getenv(wp_nonce_salt));
 
 /**#@-*/
 
