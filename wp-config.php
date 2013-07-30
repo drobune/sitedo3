@@ -3,7 +3,7 @@
  * The base configurations of the WordPress.
  *
  * このファイルは、MySQL、テーブル接頭辞、秘密鍵、言語、ABSPATH の設定を含みます。
- * より詳しい情報は {@link http://wpdocs.sourceforge.jp/wp-config.php_%E3%81%AE%E7%B7%A8%E9%9B%86 
+ * より詳しい情報は {@link http://wpdocs.sourceforge.jp/wp-config.php_%E3%81%AE%E7%B7%A8%E9%9B%86
  * wp-config.php の編集} を参照してください。MySQL の設定情報はホスティング先より入手できます。
  *
  * このファイルはインストール時に wp-config.php 作成ウィザードが利用します。
@@ -13,7 +13,7 @@
  * @package WordPress
  */
 
-// 注意: 
+// 注意:
 // Windows の "メモ帳" でこのファイルを編集しないでください !
 // 問題なく使えるテキストエディタ
 // (http://wpdocs.sourceforge.jp/Codex:%E8%AB%87%E8%A9%B1%E5%AE%A4 参照)
@@ -21,16 +21,16 @@
 
 // ** MySQL 設定 - こちらの情報はホスティング先から入手してください。 ** //
 /** WordPress のためのデータベース名 */
-define('DB_NAME', 'database_name_here');
+define('DB_NAME', getenv(mydb_name));
 
 /** MySQL データベースのユーザー名 */
-define('DB_USER', 'username_here');
+define('DB_USER', getenv(mydb_user));
 
 /** MySQL データベースのパスワード */
-define('DB_PASSWORD', 'password_here');
+define('DB_PASSWORD', getenv(mydb_password));
 
 /** MySQL のホスト名 */
-define('DB_HOST', 'localhost');
+define('DB_HOST', getenv(mydb_host));
 
 /** データベースのテーブルを作成する際のデータベースのキャラクターセット */
 define('DB_CHARSET', 'utf8');
