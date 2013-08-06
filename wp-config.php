@@ -13,6 +13,10 @@
  * @package WordPress
  */
 
+if (file_exists('env.php')) {
+    include('env.php');
+}
+
 // 注意:
 // Windows の "メモ帳" でこのファイルを編集しないでください !
 // 問題なく使えるテキストエディタ
@@ -21,16 +25,20 @@
 
 // ** MySQL 設定 - こちらの情報はホスティング先から入手してください。 ** //
 /** WordPress のためのデータベース名 */
-define('DB_NAME', getenv(mydb_name));
+// define('DB_NAME', getenv(mydb_name));
+define('DB_NAME', 'wp');
 
 /** MySQL データベースのユーザー名 */
-define('DB_USER', getenv(mydb_user));
+// define('DB_USER', getenv(mydb_user));
+define('DB_USER', 'saitoudousan');
 
 /** MySQL データベースのパスワード */
-define('DB_PASSWORD', getenv(mydb_password));
+// define('DB_PASSWORD', getenv(mydb_password));
+define('DB_PASSWORD', '!Rb*zdJUl#+b:(Q[^HQj');
 
 /** MySQL のホスト名 */
-define('DB_HOST', getenv(mydb_host));
+// define('DB_HOST', getenv(mydb_host));
+define('DB_HOST', 'localhost');
 
 /** データベースのテーブルを作成する際のデータベースのキャラクターセット */
 define('DB_CHARSET', 'utf8');
@@ -81,7 +89,7 @@ define('WPLANG', 'ja');
  * この値を true にすると、開発中に注意 (notice) を表示します。
  * テーマおよびプラグインの開発者には、その開発環境においてこの WP_DEBUG を使用することを強く推奨します。
  */
-define('WP_DEBUG', false);
+define('WP_DEBUG', true);
 
 /* 編集が必要なのはここまでです ! WordPress でブログをお楽しみください。 */
 
