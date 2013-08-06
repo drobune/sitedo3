@@ -25,20 +25,16 @@ if (file_exists('env.php')) {
 
 // ** MySQL 設定 - こちらの情報はホスティング先から入手してください。 ** //
 /** WordPress のためのデータベース名 */
-// define('DB_NAME', getenv(mydb_name));
-define('DB_NAME', 'wp');
+define('DB_NAME', getenv(mydb_name));
 
 /** MySQL データベースのユーザー名 */
-// define('DB_USER', getenv(mydb_user));
-define('DB_USER', 'saitoudousan');
+define('DB_USER', getenv(mydb_user));
 
 /** MySQL データベースのパスワード */
-// define('DB_PASSWORD', getenv(mydb_password));
-define('DB_PASSWORD', '!Rb*zdJUl#+b:(Q[^HQj');
+define('DB_PASSWORD', getenv(mydb_password));
 
 /** MySQL のホスト名 */
-// define('DB_HOST', getenv(mydb_host));
-define('DB_HOST', 'localhost');
+define('DB_HOST', getenv(mydb_host));
 
 /** データベースのテーブルを作成する際のデータベースのキャラクターセット */
 define('DB_CHARSET', 'utf8');
