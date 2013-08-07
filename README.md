@@ -1,4 +1,6 @@
 sitedo3
 =======
 
-wordpress @ engineyard
+wordpress on heroku
+
+### [visit site](http://sitedo3.net) ###
