@@ -13,7 +13,7 @@
  * @package WordPress
  */
 
-if (file_exists('env.php')) {
+if (file_exists(ABSPATH . 'env.php')) {
     include('env.php');
 }
 
@@ -85,7 +85,12 @@ define('WPLANG', 'ja');
  * この値を true にすると、開発中に注意 (notice) を表示します。
  * テーマおよびプラグインの開発者には、その開発環境においてこの WP_DEBUG を使用することを強く推奨します。
  */
-define('WP_DEBUG', false);
+define('WP_DEBUG', true);
+if (WP_DEBUG) { // デバッグモードの時だけ
+    define('WP_DEBUG_LOG', true); // debug.log ファイルに記録
+    define('WP_DEBUG_DISPLAY', true); // ブラウザ上に表示しない
+    //@ini_set('display_errors',0); // ブラウザ上に表示しない
+}
 
 /* 編集が必要なのはここまでです ! WordPress でブログをお楽しみください。 */
 
