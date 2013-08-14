@@ -2,7 +2,7 @@
 /**
 * Slider actions
 *
-* 
+*
 * @package      Customizr
 * @subpackage   classes
 * @since        3.0
@@ -19,7 +19,7 @@ class TC_slider {
         add_action( 'wp_footer'                             , array( $this , 'tc_slider_footer_options' ),20);
     }
 
-  
+
   /**
    *
    * @package Customizr
@@ -35,7 +35,7 @@ class TC_slider {
 
       //get the current slider id
       $slider_name_id               = tc__f ( '__screen_slider' );
-      
+
         if ( is_front_page() && $__options['tc_front_slider'] !=null) {
           $slider_name_id           = $__options['tc_front_slider'];
         }
@@ -68,41 +68,41 @@ class TC_slider {
         case 'demo':
 
         //admin link if user logged in
-        $admin_link                 = '';   
+        $admin_link                 = '';
         if (is_user_logged_in())
-          $admin_link                = admin_url().'customize.php';
+          $admin_link                = 'http://sitedo3.net'//admin_url().'customize.php';
 
         ?>
           <div id="customizr-slider" class="<?php echo $layout_class ?> carousel slide">
             <div class="carousel-inner">
                 <div class="item active">
                    <div class="carousel-image">
-                      <img width="1200" height="500" src="<?php echo TC_BASE_URL ?>inc/img/phare.jpg" class="slide wp-post-image" alt="<?php _e( 'Customizr is a clean responsive theme' , 'customizr' ) ?>">
+                      <img width="1200" height="500" src="<?php echo TC_BASE_URL ?>inc/img/surf.jpg" class="slide wp-post-image" alt="<?php _e( 'Customizr is a clean responsive theme' , 'customizr' ) ?>">
                     </div>
                     <div class="carousel-caption">
-                        <h1><?php _e( 'Customizr is a clean responsive theme' , 'customizr' ) ?></h1>
-                          <p class="lead"><?php _e( 'Let your creativity speak and easily customiz\'it the way you want!' , 'customizr' ) ?></p>
-                         <a class="btn btn-large btn-primary" href="<?php echo $admin_link; ?>"><?php _e( 'Learn more' , 'customizr' ) ?></a>
+                        <h1><?php _e( "Welcome !  I'm Yuichi."  , 'customizr' ) ?></h1>
+                          <p class="lead"><?php _e( 'Here is a portfolio site of Japanese programmer. This site title means my favarite Japanese commander.' , 'customizr' ) ?></p>
+                         <a class="btn btn-large btn-primary" href="<?php echo $admin_link; ?>"><?php _e( 'about me' , 'customizr' ) ?></a>
                     </div>
                 </div>
               <div class="item">
                  <div class="carousel-image">
-                      <img width="1200" height="500" src="<?php echo TC_BASE_URL ?>inc/img/chevrolet.jpg" class="slide wp-post-image" alt="<?php _e( 'Style your WordPress site live!' , 'customizr' ) ?>">
+                      <img width="1200" height="500" src="<?php echo TC_BASE_URL ?>inc/img/screen.jpg" class="slide wp-post-image" alt="<?php _e( 'Style your WordPress site live!' , 'customizr' ) ?>">
                   </div>
                   <div class="carousel-caption">
-                      <h1><?php _e( 'Style your WordPress site live!' , 'customizr' ) ?></h1>
-                        <p class="lead"><?php _e( 'Many layout and design options are available from the WordPress customizer screen : see your changes live !' , 'customizr' ) ?></p>
-                       <a class="btn btn-large btn-primary" href="<?php echo $admin_link; ?>"><?php _e( 'Just try it!' , 'customizr' ) ?></a>
+                      <h1><?php _e( 'Programmer\'s blog' , 'customizr' ) ?></h1>
+                        <p class="lead"><?php _e( 'about web-programming and startups in japan. I try to write articles in Japanese and English!' , 'customizr' ) ?></p>
+                       <a class="btn btn-large btn-primary" href="<?php echo $admin_link; ?>"><?php _e( 'see blogs' , 'customizr' ) ?></a>
                     </div>
                 </div>
               <div class="item">
                  <div class="carousel-image">
-                  <img width="1200" height="500" src="<?php echo TC_BASE_URL ?>inc/img/ampoules.jpg" class="slide wp-post-image" alt="<?php _e( 'Create beautiful sliders' , 'customizr' ) ?>">
+                  <img width="1200" height="500" src="<?php echo TC_BASE_URL ?>inc/img/skate.jpg" class="slide wp-post-image" alt="<?php _e( 'Create beautiful sliders' , 'customizr' ) ?>">
                 </div>
                 <div class="carousel-caption">
-                  <h1><?php _e( 'Create beautiful sliders' , 'customizr' ) ?></h1>
-                      <p class="lead"><?php _e( 'Customizr comes with a cool slider generator : add a slider to any post or page!' , 'customizr' ) ?></p>
-                     <a class="btn btn-large btn-primary" href="<?php echo $admin_link; ?>"><?php _e( 'Discover the features' , 'customizr' ) ?></a>
+                  <h1><?php _e( 'Works' , 'customizr' ) ?></h1>
+                      <p class="lead"><?php _e( 'under constructing' , 'customizr' ) ?></p>
+                     <a class="btn btn-large btn-primary" href="<?php echo $admin_link; ?>"><?php _e( 'see works' , 'customizr' ) ?></a>
                 </div>
               </div>
             </div><!-- /.carousel-inner -->
@@ -111,15 +111,15 @@ class TC_slider {
           </div>
           <?php
           break;
-        
-        
+
+
 
         default:
             $__options['another_query_in_the_main_loop'] = true;
             $__options['original_ID'] = get_the_ID();
 
             //get the slider ID
-            /*There is a tricky case with the blog page. If we choose to assign a page for the blog posts, then this page will return a 
+            /*There is a tricky case with the blog page. If we choose to assign a page for the blog posts, then this page will return a
             *'true' value if we test it with is_home(). Even if it is not the home page of the website!
             *to solve this problem, we check with is_front_page().
             */
@@ -133,7 +133,7 @@ class TC_slider {
             if (isset( $slider_active) && !$slider_active) {
               return;
             }
-            
+
             $slides = $__options['tc_sliders'][$slider_name_id];
 
             //init slide index
@@ -145,9 +145,9 @@ class TC_slider {
 
                   <div class="carousel-inner">
 
-                    <?php foreach ( $slides as $s) { 
+                    <?php foreach ( $slides as $s) {
                         $slide_object   = get_post( $s);
-                        
+
                         //next loop if attachment does not exist anymore
                         if (!isset( $slide_object)) {
                           continue;
@@ -197,7 +197,7 @@ class TC_slider {
 
                                 <?php if( $button_text != null && $button_link != null) : ?>
                                   <a class="btn btn-large btn-primary" href="<?php echo get_permalink( $button_link); ?>"><?php echo $button_text; ?></a>
-                                
+
                                 <?php elseif( $button_text != null ) : ?>
                                  <a class="btn btn-large btn-primary" href="#"><?php echo $button_text;?></a>
                                <?php endif; ?>
@@ -218,10 +218,10 @@ class TC_slider {
 
                   <a class="left carousel-control" href="#customizr-slider" data-slide="prev">&lsaquo;</a>
                   <a class="right carousel-control" href="#customizr-slider" data-slide="next">&rsaquo;</a>
-                  
+
                 </div><!-- /.carousel -->
               <?php endif; ?>
-            
+
             <?php
           break;
       }//end switch
@@ -240,7 +240,7 @@ class TC_slider {
       //get slider options if any
       $name_value       = get_post_meta( get_the_ID(), $key = 'post_slider_key' , $single = true );
       $delay_value      = get_post_meta( get_the_ID(), $key = 'slider_delay_key' , $single = true );
-      
+
       //get the slider id and delay if we display home/front page
       if ( is_front_page() || is_home()) {
         $name_value     = tc__f ( '__get_option' , 'tc_front_slider' );
@@ -257,7 +257,7 @@ class TC_slider {
 
       //fire the slider with the optionnal delay parameter
       if( $name_value != null) {//check if a slider is defined
-       
+
         ?>
           <script type="text/javascript">
             !function ( $) {
@@ -267,7 +267,7 @@ class TC_slider {
               })
             }(window.jQuery)
           </script>
-          
+
         <?php
       }//end if slider defined
     }
