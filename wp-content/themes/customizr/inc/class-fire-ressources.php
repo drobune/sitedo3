@@ -2,7 +2,7 @@
 /**
 * Loads front end stylesheets and scripts
 *
-* 
+*
 * @package      Customizr
 * @subpackage   classes
 * @since        3.0
@@ -27,12 +27,12 @@ class TC_ressources {
 	 * @since Customizr 1.1
 	 */
 	  function tc_customizer_styles() {
-	    wp_register_style( 
-	      'customizr-skin' , 
-	      TC_BASE_URL.'inc/css/'.tc__f ( '__get_option' , 'tc_skin' ), 
-	      array(), 
-	      CUSTOMIZR_VER, 
-	      $media = 'all' 
+	    wp_register_style(
+	      'customizr-skin' ,
+	      TC_BASE_URL.'inc/css/'.tc__f ( '__get_option' , 'tc_skin' ),
+	      array(),
+	      CUSTOMIZR_VER,
+	      $media = 'all'
 	      );
 
 
@@ -40,12 +40,12 @@ class TC_ressources {
 	    wp_enqueue_style( 'customizr-skin' );
 
 	    //enqueue WP style sheet
-	    wp_enqueue_style( 
-	    	'customizr-style' , 
-	    	get_stylesheet_uri() , 
-	    	array( 'customizr-skin' ) , 
-	    	CUSTOMIZR_VER , 
-	    	$media = 'all'  
+	    wp_enqueue_style(
+	    	'customizr-style' ,
+	    	get_stylesheet_uri() ,
+	    	array( 'customizr-skin' ) ,
+	    	CUSTOMIZR_VER ,
+	    	$media = 'all'
 	    );
 
 	}
@@ -55,7 +55,7 @@ class TC_ressources {
 
 	/**
 	 * Loads Customizr and JS script in footer for better time load.
-	 * 
+	 *
 	 * @uses wp_enqueue_script() to manage script dependencies
 	 * @package Customizr
 	 * @since Customizr 1.0
@@ -66,7 +66,7 @@ class TC_ressources {
 	      wp_enqueue_script( 'jquery-ui-core' );
 
 	      wp_enqueue_script( 'bootstrap' ,TC_BASE_URL . 'inc/js/bootstrap.min.js' ,array( 'jquery' ),null, $in_footer = true);
-	     
+
 	      //tc scripts
 	      wp_enqueue_script( 'tc-scripts' ,TC_BASE_URL . 'inc/js/tc-scripts.js' ,array( 'jquery' ),null, $in_footer = true);
 
@@ -75,6 +75,9 @@ class TC_ressources {
 
 	      //modernizr (must be loaded in wp_head())
 	      wp_enqueue_script( 'modernizr' ,TC_BASE_URL . 'inc/js/modernizr.js' ,array( 'jquery' ),null, $in_footer = false);
+
+	      //pretty print
+	      wp_enqueue_script( 'prettyprint' ,TC_BASE_URL . 'inc/js/prettyprint.js' ,array( 'jquery' ),null, $in_footer = true);
 
 	      //fancybox script and style
 	      $tc_fancybox = tc__f ( '__get_option' , 'tc_fancybox' );
