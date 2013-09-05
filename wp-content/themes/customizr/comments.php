@@ -26,20 +26,10 @@ if ( post_password_required() )
 
 <div id="comments" class="comments-area">
 
-	<?php if ( have_comments() ) : ?>
 
-		<?php 
-			do_action ( '__comment_title' );
-
-			do_action ( '__comment_list' );
-
-			do_action ( '__comment_navigation' );
-			
-			do_action ( '__comment_close' );
-		?>
-
-	<?php endif; // have_comments() ?>
-
-<?php comment_form(); ?>
+<!-- X:S ZenBackWidget -->
+<script type="text/javascript">document.write(unescape("%3Cscript")+" src='http://widget.zenback.jp/?base_uri=http%3A//sitedo3.net&nsid=115532946567383525%3A%3A115532964015640761&rand="+Math.ceil((new Date()*1)*Math.random())+"' type='text/javascript'"+unescape("%3E%3C/script%3E"));
+</script>
+<!-- X:E ZenBackWidget -->
 
 </div><!-- #comments .comments-area -->
