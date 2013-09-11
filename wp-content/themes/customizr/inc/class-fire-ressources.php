@@ -77,7 +77,7 @@ class TC_ressources {
 	      wp_enqueue_script( 'modernizr' ,TC_BASE_URL . 'inc/js/modernizr.js' ,array( 'jquery' ),null, $in_footer = false);
 
 	      //pretty print
-	      wp_enqueue_script( 'prettyprint' ,TC_BASE_URL . 'inc/js/prettyprint.js' ,array( 'jquery' ),null, $in_footer = true);
+	      //wp_enqueue_script( 'prettyprint' ,TC_BASE_URL . 'inc/js/prettyprint.js' ,array( 'jquery' ),null, $in_footer = true);
 
 	      //fancybox script and style
 	      $tc_fancybox = tc__f ( '__get_option' , 'tc_fancybox' );
