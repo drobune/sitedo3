@@ -82,7 +82,6 @@ class TC_slider {
                     <div class="carousel-caption">
                         <h1><?php _e( "Welcome !  I'm Yuichi."  , 'customizr' ) ?></h1>
                           <p class="lead"><?php _e( 'Here is a portfolio site of Japanese programmer. This site title means my favarite Japanese commander.' , 'customizr' ) ?></p>
-                         <a class="btn btn-large btn-primary" href="<?php echo $admin_link; ?>"><?php _e( 'about me' , 'customizr' ) ?></a>
                     </div>
                 </div>
               <div class="item">
@@ -92,7 +91,6 @@ class TC_slider {
                   <div class="carousel-caption">
                       <h1><?php _e( 'Programmer\'s blog' , 'customizr' ) ?></h1>
                         <p class="lead"><?php _e( 'about web-programming and startups in japan. I try to write articles in Japanese and English!' , 'customizr' ) ?></p>
-                       <a class="btn btn-large btn-primary" href="<?php echo $admin_link; ?>"><?php _e( 'see blogs' , 'customizr' ) ?></a>
                     </div>
                 </div>
               <div class="item">
@@ -101,8 +99,7 @@ class TC_slider {
                 </div>
                 <div class="carousel-caption">
                   <h1><?php _e( 'Works' , 'customizr' ) ?></h1>
-                      <p class="lead"><?php _e( 'under constructing' , 'customizr' ) ?></p>
-                     <a class="btn btn-large btn-primary" href="<?php echo $admin_link; ?>"><?php _e( 'see works' , 'customizr' ) ?></a>
+                      <p class="lead"><?php _e( 'My products...' , 'customizr' ) ?></p>
                 </div>
               </div>
             </div><!-- /.carousel-inner -->
